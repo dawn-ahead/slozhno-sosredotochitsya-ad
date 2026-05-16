@@ -1,19 +1,31 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+
 :root {
-  --background-color: #fff1f7;
-  --accent-color: #ff8dcb;
-  --heading-color: #ffc2e6;
-  --text-color: #353430;
-  --menu-color: #353430;
-  --title-decor-color: #353430;
-  --title-color: #353430;
-  --hover-border-color: rgba(50, 49, 45, 0.4);
-  --font-family: 'IBM Plex Mono', monospace;
+  /* цветовые переменные */
+  --accent-color: #FF0070;
+  --button-hover-outline: rgba(255, 0, 112, 0.4);
+  --header-color: rgba(219, 0, 255, 1);
+  --shadow-color: #FF0070;
+  --title-decor-bg-color: rgba(255, 0, 112, 1);
+  --title-decor-text-color: rgba(0, 0, 40, 1);
+  --bg-image: url("../images/cover-image-dark.png");
+  --not-accent-color: rgba(241, 178, 206, 1);
+  --link-shadow-color: #ff0070;
+  --bg-color: #000028;
+
+  /* перемнные размеров */
+  --padding: 10px;
+  --vertical-padding: 40px;
+  --sections-gap: 50px;
+  --articles-gap: 20px;
+
+  /* переменные шрифтов */
+  --main-font: 'IBM Plex Mono', monospace;
+  --header-weight: 700;
+  --text-weight: 400;
   --font-size: 18px;
-  --line-height: 1.3;
-  --general-padding: 10px;
-  --main-padding-block: 40px;
-  --main-gap: 50px;
-  --menu-margin: 65px;
-  --promo-margin: 55px;
-  --display-bulb: none;
+  --line-height: 130%;
 }
