@@ -1,5 +1,6 @@
 body {
   background-color: var(--background-color);
+  margin: 0;
 }
 
 .rec-element {
@@ -435,10 +436,11 @@ article:last-of-type {
 }
 
 .page {
-  background-attachment: fixed;
+  
   background-image: url(../images/cover-image-dark.png);
   background-color: var(--background-color);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
 }
