@@ -3,6 +3,15 @@ body {
   margin: 0;
 }
 
+.page {
+  background-image: url(../images/cover-image-dark.png);
+  background-color: var(--background-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
 .rec-element {
   text-transform: uppercase;
   position: absolute;
@@ -113,7 +122,7 @@ button {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: 700;
-  line-height: 82.5%; /* 95.7px */
+  line-height: 82.5%;
 }
 
 .header__topic-description {
@@ -247,11 +256,13 @@ article:last-of-type {
 
 .image-section__body {
   display: grid;
+  gap: 10px;
 }
 
 .image-section__element {
-  inline-size: 100%;
-  gap: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .footer {
@@ -278,8 +289,8 @@ article:last-of-type {
   line-height: 82.5%;
 }
 
-@media ( width >= 768px ) {
-
+/* Медиа-запрос для планшетов (768px) */
+@media (width >= 768px) {
   .rec-element {
     top: 24px;
     right: 29px;
@@ -342,10 +353,9 @@ article:last-of-type {
   }
   
   .image-section {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 100%;
-    display: grid;
     margin-top: 77px;
   }
 
@@ -355,9 +365,11 @@ article:last-of-type {
     grid-column: span 3;
   }
 
-  .image-section__element {
-    block-size: 100%;
-    object-fit: cover;
+  .image-section__body {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .image-section__element-sunset {
@@ -367,6 +379,7 @@ article:last-of-type {
   .image-section__element-ice-cream {
     grid-row: span 2;
   }
+
   .image-section__element-tape {
     grid-row: span 2;
   }
@@ -374,6 +387,7 @@ article:last-of-type {
   .image-section__element-street {
     grid-column: span 2;
   }
+
   .image-section__element-books {
     grid-column: 2;
     grid-row: 3;
@@ -384,8 +398,8 @@ article:last-of-type {
   }
 }
 
+/* Медиа-запрос для десктопа (1024px) */
 @media (width >= 1024px) {
-
   .header__theme-menu {
     width: 100%;
     display: flex;
@@ -433,14 +447,4 @@ article:last-of-type {
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-}
-
-.page {
-  
-  background-image: url(../images/cover-image-dark.png);
-  background-color: var(--background-color);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
 }
